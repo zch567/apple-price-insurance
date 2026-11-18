@@ -1,0 +1,11 @@
+<view class="shell">
+  <view class="hero">
+    <text class="hero-context">静宁苹果 · 保险与期货</text>
+    <text class="hero-title">保险测算</text>
+  </view>
+  <view class="panel">
+    <text class="heading">测算功能待接入</text>
+    <text class="label">这里将提供 90%、95%、100% 三档保障的赔付比较。</text>
+  </view>
+  <navigator class="action secondary" open-type="{{backDelta ? 'navigateBack' : 'redirect'}}" delta="{{backDelta}}" url="/pages/price/index"><text>返回价格走势</text><text class="arrow" aria-hidden="true">→</text></navigator>
+</view>

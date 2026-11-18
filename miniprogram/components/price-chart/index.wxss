@@ -1,0 +1,76 @@
+.chart-panel { padding: 26rpx 24rpx; }
+.reading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12rpx;
+  margin: 14rpx 0 18rpx;
+}
+.reading-detail, .reading-value { min-width: 0; }
+.reading-meta { display: block; font-size: 25rpx; }
+.reading-value { text-align: right; white-space: nowrap; }
+.reading-number { font-size: 50rpx; font-weight: 700; letter-spacing: -1rpx; line-height: 1.1; }
+.reading-unit { margin-left: 7rpx; font-size: 24rpx; }
+.ranges {
+  display: flex;
+  gap: 6rpx;
+  padding: 5rpx;
+  background: #f5eff2;
+  border-radius: 14rpx;
+}
+.range, .step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 10rpx;
+  border: 0;
+  font-size: 25rpx;
+  line-height: 1.2;
+  color: #67203c;
+}
+.range::after, .step::after { border: 0; }
+.range {
+  flex: 1;
+  min-width: 0;
+  min-height: 70rpx;
+  border-radius: 10rpx;
+  background: transparent;
+}
+.range-active { color: #fffafd; background: #851e3e; font-weight: 600; }
+.chart-caption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4rpx 12rpx;
+  margin-top: 14rpx;
+}
+.plot { display: block; width: 100%; height: 360rpx; }
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8rpx;
+  padding-bottom: 12rpx;
+  border-bottom: 1rpx solid #e9dce3;
+}
+.step-index { flex: none; white-space: nowrap; }
+.step { width: auto; flex: 0 0 144rpx; min-height: 78rpx; border-radius: 12rpx; background: #f3e4eb; }
+.step[disabled] { color: #746872; background: #f5f0f3; }
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6rpx 20rpx;
+  margin-top: 12rpx;
+  font-size: 24rpx;
+  color: #625360;
+}
+.swatch { display: inline-block; width: 22rpx; margin-right: 7rpx; vertical-align: middle; }
+.monthly { border-top: 4rpx dashed #766785; }
+.weekly { border-top: 4rpx solid #9e3154; }
+.gap { height: 14rpx; background: #efe7ec; border: 1rpx solid #dbced8; }
+.rollover { width: 12rpx; height: 12rpx; border-radius: 50%; background: #a55d27; }
+.chart-source { margin-top: 7rpx; font-size: 24rpx; }
+.chart-note { margin-top: 6rpx; font-size: 24rpx; }

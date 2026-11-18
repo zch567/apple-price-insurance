@@ -1,0 +1,14 @@
+<view class="shell">
+  <text class="page-context">静宁苹果 · 保险与期货</text>
+  <view class="actions">
+    <navigator class="action" url="/pages/risk/index"><text>风险分析</text><text class="arrow" aria-hidden="true">→</text></navigator>
+    <navigator class="action secondary" url="/pages/insurance/index"><text>保险测算</text><text class="arrow" aria-hidden="true">→</text></navigator>
+  </view>
+
+  <price-chart title="苹果期货主力连续 · 周收盘价" series="{{futures}}" value-key="closeYuanPerTon" meta-key="contract"
+    unit="元/吨" color="#364a93" source="来源：郑商所苹果期货周行情，经 A1 成果「期货主力连续」整理。" />
+
+  <price-chart title="新华·静宁苹果价格指数" series="{{spotIndex}}" value-key="indexPoints" meta-key="frequency"
+    unit="点" decimals="{{2}}" color="#9e3154" source="来源：新华·中国（静宁）苹果价格指数「指数点位(精确)」。"
+    note="2023-10-23 起为周度数据。2026-03-02 展示值由 2744.39 校正为 1892.44。" />
+</view>

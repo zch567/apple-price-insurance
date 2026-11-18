@@ -1,0 +1,19 @@
+{
+  "description": "静宁苹果价格与风险 · 微信小程序",
+  "projectname": "jingning-apple",
+  "appid": "touristappid",
+  "compileType": "miniprogram",
+  "miniprogramRoot": "miniprogram/",
+  "setting": {
+    "es6": true,
+    "minified": true
+  },
+  "packOptions": {
+    "include": [
+      {
+        "type": "folder",
+        "value": "data"
+      }
+    ]
+  }
+}

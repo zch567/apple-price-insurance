@@ -1,0 +1,42 @@
+<view class="shell">
+  <text class="page-context">静宁苹果 · 保险与期货</text>
+
+  <view class="panel">
+    <text class="heading">主成分分析（PCA）</text>
+    <view class="cumulative">
+      <text class="label">前三个主成分累计贡献率</text>
+      <text class="number cumulative-value">{{cumulative}}</text>
+    </view>
+    <view class="component" wx:for="{{components}}" wx:key="id">
+      <view class="factor">
+        <text class="factor-id">{{item.id}}</text>
+        <text class="factor-name">{{item.name}}</text>
+        <text class="factor-value number">{{item.percent}}</text>
+      </view>
+      <view class="track" aria-hidden="true"><view class="fill" style="width: {{item.percent}}"></view></view>
+      <text class="factor-description">{{item.description}}</text>
+    </view>
+    <text class="source provenance">来源：A3 成果「主成分结果」「主成分解释」。</text>
+  </view>
+
+  <view class="panel">
+    <text class="heading">样本外预测误差</text>
+    <text class="label block-label">最后 12 周（2026 年 8–11 月）</text>
+    <text class="label block-label metric-caption">MAPE · 平均绝对百分比误差</text>
+    <view class="metrics">
+      <view class="metric">
+        <text class="label">{{arimaName}}</text>
+        <text class="number metric-value">{{arimaMape}}</text>
+      </view>
+      <view class="metric">
+        <text class="label">随机游走基准</text>
+        <text class="number metric-value">{{baselineMape}}</text>
+      </view>
+    </view>
+    <text class="interpretation">本次测试的误差仅相差 <text class="number difference">{{mapeGap}} 个百分点</text>。</text>
+    <text class="source provenance">来源：A4 成果「检验与模型」「预测与误差」。</text>
+    <text class="source forecast-note">完整预测曲线待补齐带日期的 12 周预测值。</text>
+  </view>
+
+  <navigator class="action" url="/pages/insurance/index"><text>保险测算</text><text class="arrow" aria-hidden="true">→</text></navigator>
+</view>

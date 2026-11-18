@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/price/index",
+    "pages/risk/index",
+    "pages/insurance/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "静宁苹果保险与期货",
+    "navigationBarBackgroundColor": "#611a34",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f8f3f2"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

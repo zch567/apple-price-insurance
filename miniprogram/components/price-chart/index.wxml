@@ -1,0 +1,40 @@
+<view class="panel chart-panel">
+  <text class="heading">{{title}}</text>
+  <view class="reading">
+    <view class="reading-detail">
+      <text class="label">{{isLatest ? '最新观测' : '所选观测'}}</text>
+      <text class="reading-meta number">{{selectedDate}}<text wx:if="{{selectedMeta}}"> · {{selectedMeta}}</text></text>
+    </view>
+    <view class="reading-value" style="color: {{color}}">
+      <text class="number reading-number">{{selectedValue}}</text><text class="reading-unit">{{unit}}</text>
+    </view>
+  </view>
+
+  <view class="ranges" aria-label="图表时间范围">
+    <button wx:for="{{ranges}}" wx:key="weeks" class="range {{activeWeeks === item.weeks ? 'range-active' : ''}}"
+      aria-label="{{item.label}}{{activeWeeks === item.weeks ? '，已选中' : ''}}"
+      data-weeks="{{item.weeks}}" bindtap="changeRange">{{item.label}}</button>
+  </view>
+
+  <view class="chart-caption label">
+    <text class="number">{{startDate}} 至 {{endDate}}</text>
+    <text>{{visibleCount}} 条</text>
+  </view>
+  <canvas id="plot" class="plot" type="2d" bindtouchend="selectPoint" aria-hidden="true" />
+  <view class="stepper">
+    <button class="step" disabled="{{selectedNumber === 1}}" data-step="-1" bindtap="stepPoint">‹ 上一条</button>
+    <text class="label number step-index">{{selectedNumber}} / {{visibleCount}}</text>
+    <button class="step" disabled="{{selectedNumber === visibleCount}}" data-step="1" bindtap="stepPoint">下一条 ›</button>
+  </view>
+
+  <view class="legend" wx:if="{{metaKey === 'frequency'}}">
+    <text><text class="swatch monthly" aria-hidden="true"></text>月度</text>
+    <text><text class="swatch weekly" aria-hidden="true"></text>周度</text>
+    <text><text class="swatch gap" aria-hidden="true"></text>长缺口</text>
+  </view>
+  <view class="legend" wx:else>
+    <text><text class="swatch rollover" aria-hidden="true"></text>{{selectedEvent || '橙色标记为主力换月'}}</text>
+  </view>
+  <text class="source chart-source">{{source}}</text>
+  <text class="source chart-note" wx:if="{{note}}">{{note}}</text>
+</view>

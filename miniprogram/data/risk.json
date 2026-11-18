@@ -1,0 +1,27 @@
+{
+  "pca": {
+    "components": [
+      {
+        "id": "PC1",
+        "name": "气象因子",
+        "contributionRate": 0.3937
+      },
+      {
+        "id": "PC2",
+        "name": "期现背离因子",
+        "contributionRate": 0.2651
+      },
+      {
+        "id": "PC3",
+        "name": "价格共动因子",
+        "contributionRate": 0.2238
+      }
+    ],
+    "cumulativeContributionRate": 0.8825
+  },
+  "arima": {
+    "modelName": "ARIMA(0,1,2)",
+    "outOfSampleMape": 0.1573,
+    "baselineMape": 0.1594
+  }
+}

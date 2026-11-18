@@ -1,0 +1,1616 @@
+{
+  "futures": [
+    {
+      "date": "2023-01-06",
+      "closeYuanPerTon": 8433,
+      "contract": "AP305"
+    },
+    {
+      "date": "2023-01-13",
+      "closeYuanPerTon": 8786,
+      "contract": "AP305"
+    },
+    {
+      "date": "2023-01-20",
+      "closeYuanPerTon": 8724,
+      "contract": "AP305"
+    },
+    {
+      "date": "2023-02-03",
+      "closeYuanPerTon": 8975,
+      "contract": "AP305"
+    },
+    {
+      "date": "2023-02-10",
+      "closeYuanPerTon": 8575,
+      "contract": "AP305"
+    },
+    {
+      "date": "2023-02-17",
+      "closeYuanPerTon": 8958,
+      "contract": "AP305"
+    },
+    {
+      "date": "2023-02-24",
+      "closeYuanPerTon": 9234,
+      "contract": "AP305"
+    },
+    {
+      "date": "2023-03-03",
+      "closeYuanPerTon": 9054,
+      "contract": "AP305"
+    },
+    {
+      "date": "2023-03-10",
+      "closeYuanPerTon": 9082,
+      "contract": "AP305"
+    },
+    {
+      "date": "2023-03-17",
+      "closeYuanPerTon": 8647,
+      "contract": "AP305"
+    },
+    {
+      "date": "2023-03-24",
+      "closeYuanPerTon": 8846,
+      "contract": "AP305"
+    },
+    {
+      "date": "2023-03-31",
+      "closeYuanPerTon": 8241,
+      "contract": "AP305"
+    },
+    {
+      "date": "2023-04-07",
+      "closeYuanPerTon": 8104,
+      "contract": "AP305"
+    },
+    {
+      "date": "2023-04-14",
+      "closeYuanPerTon": 8090,
+      "contract": "AP310"
+    },
+    {
+      "date": "2023-04-21",
+      "closeYuanPerTon": 8458,
+      "contract": "AP310"
+    },
+    {
+      "date": "2023-04-28",
+      "closeYuanPerTon": 8622,
+      "contract": "AP310"
+    },
+    {
+      "date": "2023-05-05",
+      "closeYuanPerTon": 8775,
+      "contract": "AP310"
+    },
+    {
+      "date": "2023-05-12",
+      "closeYuanPerTon": 8474,
+      "contract": "AP310"
+    },
+    {
+      "date": "2023-05-19",
+      "closeYuanPerTon": 8552,
+      "contract": "AP310"
+    },
+    {
+      "date": "2023-05-26",
+      "closeYuanPerTon": 8738,
+      "contract": "AP310"
+    },
+    {
+      "date": "2023-06-02",
+      "closeYuanPerTon": 8629,
+      "contract": "AP310"
+    },
+    {
+      "date": "2023-06-09",
+      "closeYuanPerTon": 8665,
+      "contract": "AP310"
+    },
+    {
+      "date": "2023-06-16",
+      "closeYuanPerTon": 8556,
+      "contract": "AP310"
+    },
+    {
+      "date": "2023-06-21",
+      "closeYuanPerTon": 8458,
+      "contract": "AP310"
+    },
+    {
+      "date": "2023-06-30",
+      "closeYuanPerTon": 8591,
+      "contract": "AP310"
+    },
+    {
+      "date": "2023-07-07",
+      "closeYuanPerTon": 8668,
+      "contract": "AP310"
+    },
+    {
+      "date": "2023-07-14",
+      "closeYuanPerTon": 8651,
+      "contract": "AP310"
+    },
+    {
+      "date": "2023-07-21",
+      "closeYuanPerTon": 8590,
+      "contract": "AP310"
+    },
+    {
+      "date": "2023-07-28",
+      "closeYuanPerTon": 8795,
+      "contract": "AP310"
+    },
+    {
+      "date": "2023-08-04",
+      "closeYuanPerTon": 8794,
+      "contract": "AP310"
+    },
+    {
+      "date": "2023-08-11",
+      "closeYuanPerTon": 8871,
+      "contract": "AP310"
+    },
+    {
+      "date": "2023-08-18",
+      "closeYuanPerTon": 8825,
+      "contract": "AP310"
+    },
+    {
+      "date": "2023-08-25",
+      "closeYuanPerTon": 8917,
+      "contract": "AP310"
+    },
+    {
+      "date": "2023-09-01",
+      "closeYuanPerTon": 8807,
+      "contract": "AP401"
+    },
+    {
+      "date": "2023-09-08",
+      "closeYuanPerTon": 9220,
+      "contract": "AP401"
+    },
+    {
+      "date": "2023-09-15",
+      "closeYuanPerTon": 9361,
+      "contract": "AP401"
+    },
+    {
+      "date": "2023-09-22",
+      "closeYuanPerTon": 9293,
+      "contract": "AP401"
+    },
+    {
+      "date": "2023-09-28",
+      "closeYuanPerTon": 9369,
+      "contract": "AP401"
+    },
+    {
+      "date": "2023-10-13",
+      "closeYuanPerTon": 9362,
+      "contract": "AP401"
+    },
+    {
+      "date": "2023-10-20",
+      "closeYuanPerTon": 9250,
+      "contract": "AP401"
+    },
+    {
+      "date": "2023-10-27",
+      "closeYuanPerTon": 8689,
+      "contract": "AP401"
+    },
+    {
+      "date": "2023-11-03",
+      "closeYuanPerTon": 8479,
+      "contract": "AP401"
+    },
+    {
+      "date": "2023-11-10",
+      "closeYuanPerTon": 9130,
+      "contract": "AP401"
+    },
+    {
+      "date": "2023-11-17",
+      "closeYuanPerTon": 9089,
+      "contract": "AP401"
+    },
+    {
+      "date": "2023-11-24",
+      "closeYuanPerTon": 9211,
+      "contract": "AP401"
+    },
+    {
+      "date": "2023-12-01",
+      "closeYuanPerTon": 8680,
+      "contract": "AP405"
+    },
+    {
+      "date": "2023-12-08",
+      "closeYuanPerTon": 8489,
+      "contract": "AP405"
+    },
+    {
+      "date": "2023-12-15",
+      "closeYuanPerTon": 8430,
+      "contract": "AP405"
+    },
+    {
+      "date": "2023-12-22",
+      "closeYuanPerTon": 8236,
+      "contract": "AP405"
+    },
+    {
+      "date": "2023-12-29",
+      "closeYuanPerTon": 8163,
+      "contract": "AP405"
+    },
+    {
+      "date": "2024-01-05",
+      "closeYuanPerTon": 8206,
+      "contract": "AP405"
+    },
+    {
+      "date": "2024-01-12",
+      "closeYuanPerTon": 8296,
+      "contract": "AP405"
+    },
+    {
+      "date": "2024-01-19",
+      "closeYuanPerTon": 8370,
+      "contract": "AP405"
+    },
+    {
+      "date": "2024-01-26",
+      "closeYuanPerTon": 8196,
+      "contract": "AP405"
+    },
+    {
+      "date": "2024-02-02",
+      "closeYuanPerTon": 8045,
+      "contract": "AP405"
+    },
+    {
+      "date": "2024-02-08",
+      "closeYuanPerTon": 8052,
+      "contract": "AP405"
+    },
+    {
+      "date": "2024-02-23",
+      "closeYuanPerTon": 8361,
+      "contract": "AP405"
+    },
+    {
+      "date": "2024-03-01",
+      "closeYuanPerTon": 8680,
+      "contract": "AP405"
+    },
+    {
+      "date": "2024-03-08",
+      "closeYuanPerTon": 8702,
+      "contract": "AP405"
+    },
+    {
+      "date": "2024-03-15",
+      "closeYuanPerTon": 7834,
+      "contract": "AP405"
+    },
+    {
+      "date": "2024-03-22",
+      "closeYuanPerTon": 7783,
+      "contract": "AP405"
+    },
+    {
+      "date": "2024-03-29",
+      "closeYuanPerTon": 7787,
+      "contract": "AP405"
+    },
+    {
+      "date": "2024-04-03",
+      "closeYuanPerTon": 7635,
+      "contract": "AP405"
+    },
+    {
+      "date": "2024-04-12",
+      "closeYuanPerTon": 8028,
+      "contract": "AP410"
+    },
+    {
+      "date": "2024-04-19",
+      "closeYuanPerTon": 7586,
+      "contract": "AP410"
+    },
+    {
+      "date": "2024-04-26",
+      "closeYuanPerTon": 7482,
+      "contract": "AP410"
+    },
+    {
+      "date": "2024-04-30",
+      "closeYuanPerTon": 7586,
+      "contract": "AP410"
+    },
+    {
+      "date": "2024-05-10",
+      "closeYuanPerTon": 7419,
+      "contract": "AP410"
+    },
+    {
+      "date": "2024-05-17",
+      "closeYuanPerTon": 7536,
+      "contract": "AP410"
+    },
+    {
+      "date": "2024-05-24",
+      "closeYuanPerTon": 7577,
+      "contract": "AP410"
+    },
+    {
+      "date": "2024-05-31",
+      "closeYuanPerTon": 7385,
+      "contract": "AP410"
+    },
+    {
+      "date": "2024-06-07",
+      "closeYuanPerTon": 7083,
+      "contract": "AP410"
+    },
+    {
+      "date": "2024-06-14",
+      "closeYuanPerTon": 7089,
+      "contract": "AP410"
+    },
+    {
+      "date": "2024-06-21",
+      "closeYuanPerTon": 6920,
+      "contract": "AP410"
+    },
+    {
+      "date": "2024-06-28",
+      "closeYuanPerTon": 6885,
+      "contract": "AP410"
+    },
+    {
+      "date": "2024-07-05",
+      "closeYuanPerTon": 6817,
+      "contract": "AP410"
+    },
+    {
+      "date": "2024-07-12",
+      "closeYuanPerTon": 6979,
+      "contract": "AP410"
+    },
+    {
+      "date": "2024-07-19",
+      "closeYuanPerTon": 6971,
+      "contract": "AP410"
+    },
+    {
+      "date": "2024-07-26",
+      "closeYuanPerTon": 6871,
+      "contract": "AP410"
+    },
+    {
+      "date": "2024-08-02",
+      "closeYuanPerTon": 6880,
+      "contract": "AP410"
+    },
+    {
+      "date": "2024-08-09",
+      "closeYuanPerTon": 7003,
+      "contract": "AP410"
+    },
+    {
+      "date": "2024-08-16",
+      "closeYuanPerTon": 6885,
+      "contract": "AP410"
+    },
+    {
+      "date": "2024-08-23",
+      "closeYuanPerTon": 6900,
+      "contract": "AP410"
+    },
+    {
+      "date": "2024-08-30",
+      "closeYuanPerTon": 6850,
+      "contract": "AP410"
+    },
+    {
+      "date": "2024-09-06",
+      "closeYuanPerTon": 6580,
+      "contract": "AP501"
+    },
+    {
+      "date": "2024-09-13",
+      "closeYuanPerTon": 6799,
+      "contract": "AP501"
+    },
+    {
+      "date": "2024-09-20",
+      "closeYuanPerTon": 7036,
+      "contract": "AP501"
+    },
+    {
+      "date": "2024-09-27",
+      "closeYuanPerTon": 7037,
+      "contract": "AP501"
+    },
+    {
+      "date": "2024-09-30",
+      "closeYuanPerTon": 6973,
+      "contract": "AP501"
+    },
+    {
+      "date": "2024-10-11",
+      "closeYuanPerTon": 6767,
+      "contract": "AP501"
+    },
+    {
+      "date": "2024-10-18",
+      "closeYuanPerTon": 6867,
+      "contract": "AP501"
+    },
+    {
+      "date": "2024-10-25",
+      "closeYuanPerTon": 6793,
+      "contract": "AP501"
+    },
+    {
+      "date": "2024-11-01",
+      "closeYuanPerTon": 7657,
+      "contract": "AP501"
+    },
+    {
+      "date": "2024-11-08",
+      "closeYuanPerTon": 7596,
+      "contract": "AP501"
+    },
+    {
+      "date": "2024-11-15",
+      "closeYuanPerTon": 7786,
+      "contract": "AP501"
+    },
+    {
+      "date": "2024-11-22",
+      "closeYuanPerTon": 7789,
+      "contract": "AP501"
+    },
+    {
+      "date": "2024-11-29",
+      "closeYuanPerTon": 7788,
+      "contract": "AP501"
+    },
+    {
+      "date": "2024-12-06",
+      "closeYuanPerTon": 8217,
+      "contract": "AP505"
+    },
+    {
+      "date": "2024-12-13",
+      "closeYuanPerTon": 8092,
+      "contract": "AP505"
+    },
+    {
+      "date": "2024-12-20",
+      "closeYuanPerTon": 7368,
+      "contract": "AP505"
+    },
+    {
+      "date": "2024-12-27",
+      "closeYuanPerTon": 7114,
+      "contract": "AP505"
+    },
+    {
+      "date": "2025-01-03",
+      "closeYuanPerTon": 6884,
+      "contract": "AP505"
+    },
+    {
+      "date": "2025-01-10",
+      "closeYuanPerTon": 6614,
+      "contract": "AP505"
+    },
+    {
+      "date": "2025-01-17",
+      "closeYuanPerTon": 6775,
+      "contract": "AP505"
+    },
+    {
+      "date": "2025-01-24",
+      "closeYuanPerTon": 6890,
+      "contract": "AP505"
+    },
+    {
+      "date": "2025-01-27",
+      "closeYuanPerTon": 7145,
+      "contract": "AP505"
+    },
+    {
+      "date": "2025-02-07",
+      "closeYuanPerTon": 6900,
+      "contract": "AP505"
+    },
+    {
+      "date": "2025-02-14",
+      "closeYuanPerTon": 7337,
+      "contract": "AP505"
+    },
+    {
+      "date": "2025-02-21",
+      "closeYuanPerTon": 7400,
+      "contract": "AP505"
+    },
+    {
+      "date": "2025-02-28",
+      "closeYuanPerTon": 7126,
+      "contract": "AP505"
+    },
+    {
+      "date": "2025-03-07",
+      "closeYuanPerTon": 7245,
+      "contract": "AP505"
+    },
+    {
+      "date": "2025-03-14",
+      "closeYuanPerTon": 7398,
+      "contract": "AP505"
+    },
+    {
+      "date": "2025-03-21",
+      "closeYuanPerTon": 7226,
+      "contract": "AP505"
+    },
+    {
+      "date": "2025-03-28",
+      "closeYuanPerTon": 7766,
+      "contract": "AP505"
+    },
+    {
+      "date": "2025-04-03",
+      "closeYuanPerTon": 7892,
+      "contract": "AP505"
+    },
+    {
+      "date": "2025-04-11",
+      "closeYuanPerTon": 7881,
+      "contract": "AP510"
+    },
+    {
+      "date": "2025-04-18",
+      "closeYuanPerTon": 7674,
+      "contract": "AP510"
+    },
+    {
+      "date": "2025-04-25",
+      "closeYuanPerTon": 8086,
+      "contract": "AP510"
+    },
+    {
+      "date": "2025-04-30",
+      "closeYuanPerTon": 7916,
+      "contract": "AP510"
+    },
+    {
+      "date": "2025-05-09",
+      "closeYuanPerTon": 7812,
+      "contract": "AP510"
+    },
+    {
+      "date": "2025-05-16",
+      "closeYuanPerTon": 7760,
+      "contract": "AP510"
+    },
+    {
+      "date": "2025-05-23",
+      "closeYuanPerTon": 7562,
+      "contract": "AP510"
+    },
+    {
+      "date": "2025-05-30",
+      "closeYuanPerTon": 7675,
+      "contract": "AP510"
+    },
+    {
+      "date": "2025-06-06",
+      "closeYuanPerTon": 7706,
+      "contract": "AP510"
+    },
+    {
+      "date": "2025-06-13",
+      "closeYuanPerTon": 7585,
+      "contract": "AP510"
+    },
+    {
+      "date": "2025-06-20",
+      "closeYuanPerTon": 7731,
+      "contract": "AP510"
+    },
+    {
+      "date": "2025-06-27",
+      "closeYuanPerTon": 7697,
+      "contract": "AP510"
+    },
+    {
+      "date": "2025-07-04",
+      "closeYuanPerTon": 7739,
+      "contract": "AP510"
+    },
+    {
+      "date": "2025-07-11",
+      "closeYuanPerTon": 7814,
+      "contract": "AP510"
+    },
+    {
+      "date": "2025-07-18",
+      "closeYuanPerTon": 7883,
+      "contract": "AP510"
+    },
+    {
+      "date": "2025-07-25",
+      "closeYuanPerTon": 8005,
+      "contract": "AP510"
+    },
+    {
+      "date": "2025-08-01",
+      "closeYuanPerTon": 7758,
+      "contract": "AP510"
+    },
+    {
+      "date": "2025-08-08",
+      "closeYuanPerTon": 8077,
+      "contract": "AP510"
+    },
+    {
+      "date": "2025-08-15",
+      "closeYuanPerTon": 8188,
+      "contract": "AP510"
+    },
+    {
+      "date": "2025-08-22",
+      "closeYuanPerTon": 8094,
+      "contract": "AP510"
+    },
+    {
+      "date": "2025-08-29",
+      "closeYuanPerTon": 8388,
+      "contract": "AP510"
+    },
+    {
+      "date": "2025-09-05",
+      "closeYuanPerTon": 8296,
+      "contract": "AP601"
+    },
+    {
+      "date": "2025-09-12",
+      "closeYuanPerTon": 8329,
+      "contract": "AP601"
+    },
+    {
+      "date": "2025-09-19",
+      "closeYuanPerTon": 8273,
+      "contract": "AP601"
+    },
+    {
+      "date": "2025-09-26",
+      "closeYuanPerTon": 8401,
+      "contract": "AP601"
+    },
+    {
+      "date": "2025-09-30",
+      "closeYuanPerTon": 8617,
+      "contract": "AP601"
+    },
+    {
+      "date": "2025-10-10",
+      "closeYuanPerTon": 8744,
+      "contract": "AP601"
+    },
+    {
+      "date": "2025-10-17",
+      "closeYuanPerTon": 8625,
+      "contract": "AP601"
+    },
+    {
+      "date": "2025-10-24",
+      "closeYuanPerTon": 8850,
+      "contract": "AP601"
+    },
+    {
+      "date": "2025-10-31",
+      "closeYuanPerTon": 9238,
+      "contract": "AP601"
+    },
+    {
+      "date": "2025-11-07",
+      "closeYuanPerTon": 9040,
+      "contract": "AP601"
+    },
+    {
+      "date": "2025-11-14",
+      "closeYuanPerTon": 9570,
+      "contract": "AP601"
+    },
+    {
+      "date": "2025-11-21",
+      "closeYuanPerTon": 9440,
+      "contract": "AP601"
+    },
+    {
+      "date": "2025-11-28",
+      "closeYuanPerTon": 9579,
+      "contract": "AP605"
+    },
+    {
+      "date": "2025-12-05",
+      "closeYuanPerTon": 9639,
+      "contract": "AP605"
+    },
+    {
+      "date": "2025-12-12",
+      "closeYuanPerTon": 9519,
+      "contract": "AP605"
+    },
+    {
+      "date": "2025-12-19",
+      "closeYuanPerTon": 9199,
+      "contract": "AP605"
+    },
+    {
+      "date": "2025-12-26",
+      "closeYuanPerTon": 9247,
+      "contract": "AP605"
+    },
+    {
+      "date": "2025-12-31",
+      "closeYuanPerTon": 9120,
+      "contract": "AP605"
+    },
+    {
+      "date": "2026-01-09",
+      "closeYuanPerTon": 9689,
+      "contract": "AP605"
+    },
+    {
+      "date": "2026-01-16",
+      "closeYuanPerTon": 9541,
+      "contract": "AP605"
+    },
+    {
+      "date": "2026-01-23",
+      "closeYuanPerTon": 9535,
+      "contract": "AP605"
+    },
+    {
+      "date": "2026-01-30",
+      "closeYuanPerTon": 9518,
+      "contract": "AP605"
+    },
+    {
+      "date": "2026-02-06",
+      "closeYuanPerTon": 9535,
+      "contract": "AP605"
+    },
+    {
+      "date": "2026-02-13",
+      "closeYuanPerTon": 9835,
+      "contract": "AP605"
+    },
+    {
+      "date": "2026-02-27",
+      "closeYuanPerTon": 9760,
+      "contract": "AP605"
+    },
+    {
+      "date": "2026-03-06",
+      "closeYuanPerTon": 10316,
+      "contract": "AP605"
+    },
+    {
+      "date": "2026-03-13",
+      "closeYuanPerTon": 9998,
+      "contract": "AP605"
+    },
+    {
+      "date": "2026-03-20",
+      "closeYuanPerTon": 10721,
+      "contract": "AP605"
+    },
+    {
+      "date": "2026-03-27",
+      "closeYuanPerTon": 9967,
+      "contract": "AP605"
+    },
+    {
+      "date": "2026-04-03",
+      "closeYuanPerTon": 9880,
+      "contract": "AP605"
+    },
+    {
+      "date": "2026-04-10",
+      "closeYuanPerTon": 8234,
+      "contract": "AP610"
+    },
+    {
+      "date": "2026-04-17",
+      "closeYuanPerTon": 8103,
+      "contract": "AP610"
+    },
+    {
+      "date": "2026-04-24",
+      "closeYuanPerTon": 7689,
+      "contract": "AP610"
+    },
+    {
+      "date": "2026-04-30",
+      "closeYuanPerTon": 7605,
+      "contract": "AP610"
+    },
+    {
+      "date": "2026-05-08",
+      "closeYuanPerTon": 7630,
+      "contract": "AP610"
+    },
+    {
+      "date": "2026-05-15",
+      "closeYuanPerTon": 7659,
+      "contract": "AP610"
+    },
+    {
+      "date": "2026-05-22",
+      "closeYuanPerTon": 7560,
+      "contract": "AP610"
+    },
+    {
+      "date": "2026-05-29",
+      "closeYuanPerTon": 7505,
+      "contract": "AP610"
+    },
+    {
+      "date": "2026-06-05",
+      "closeYuanPerTon": 7655,
+      "contract": "AP610"
+    },
+    {
+      "date": "2026-06-12",
+      "closeYuanPerTon": 7698,
+      "contract": "AP610"
+    },
+    {
+      "date": "2026-06-18",
+      "closeYuanPerTon": 7618,
+      "contract": "AP610"
+    },
+    {
+      "date": "2026-06-26",
+      "closeYuanPerTon": 7660,
+      "contract": "AP610"
+    },
+    {
+      "date": "2026-07-03",
+      "closeYuanPerTon": 7706,
+      "contract": "AP610"
+    },
+    {
+      "date": "2026-07-10",
+      "closeYuanPerTon": 7714,
+      "contract": "AP610"
+    },
+    {
+      "date": "2026-07-17",
+      "closeYuanPerTon": 7480,
+      "contract": "AP610"
+    },
+    {
+      "date": "2026-07-24",
+      "closeYuanPerTon": 7765,
+      "contract": "AP610"
+    },
+    {
+      "date": "2026-07-31",
+      "closeYuanPerTon": 7827,
+      "contract": "AP610"
+    },
+    {
+      "date": "2026-08-07",
+      "closeYuanPerTon": 7792,
+      "contract": "AP610"
+    },
+    {
+      "date": "2026-08-14",
+      "closeYuanPerTon": 7829,
+      "contract": "AP610"
+    },
+    {
+      "date": "2026-08-21",
+      "closeYuanPerTon": 7666,
+      "contract": "AP610"
+    },
+    {
+      "date": "2026-08-28",
+      "closeYuanPerTon": 7778,
+      "contract": "AP610"
+    },
+    {
+      "date": "2026-09-04",
+      "closeYuanPerTon": 7375,
+      "contract": "AP701"
+    },
+    {
+      "date": "2026-09-11",
+      "closeYuanPerTon": 7465,
+      "contract": "AP701"
+    },
+    {
+      "date": "2026-09-18",
+      "closeYuanPerTon": 7183,
+      "contract": "AP701"
+    },
+    {
+      "date": "2026-09-24",
+      "closeYuanPerTon": 7076,
+      "contract": "AP701"
+    },
+    {
+      "date": "2026-09-30",
+      "closeYuanPerTon": 6854,
+      "contract": "AP701"
+    },
+    {
+      "date": "2026-10-09",
+      "closeYuanPerTon": 6929,
+      "contract": "AP701"
+    },
+    {
+      "date": "2026-10-16",
+      "closeYuanPerTon": 5998,
+      "contract": "AP701"
+    },
+    {
+      "date": "2026-10-23",
+      "closeYuanPerTon": 5725,
+      "contract": "AP701"
+    },
+    {
+      "date": "2026-10-30",
+      "closeYuanPerTon": 5887,
+      "contract": "AP701"
+    },
+    {
+      "date": "2026-11-06",
+      "closeYuanPerTon": 6004,
+      "contract": "AP701"
+    }
+  ],
+  "spotIndex": [
+    {
+      "date": "2021-11-01",
+      "indexPoints": 1000,
+      "frequency": "月度"
+    },
+    {
+      "date": "2021-12-01",
+      "indexPoints": 1058.18,
+      "frequency": "月度"
+    },
+    {
+      "date": "2022-01-01",
+      "indexPoints": 1117.39,
+      "frequency": "月度"
+    },
+    {
+      "date": "2022-02-01",
+      "indexPoints": 1156.77,
+      "frequency": "月度"
+    },
+    {
+      "date": "2022-03-01",
+      "indexPoints": 1144.45,
+      "frequency": "月度"
+    },
+    {
+      "date": "2022-04-01",
+      "indexPoints": 1185.62,
+      "frequency": "月度"
+    },
+    {
+      "date": "2022-05-01",
+      "indexPoints": 1235.81,
+      "frequency": "月度"
+    },
+    {
+      "date": "2022-06-01",
+      "indexPoints": 1265.9,
+      "frequency": "月度"
+    },
+    {
+      "date": "2022-07-01",
+      "indexPoints": 1324.3,
+      "frequency": "月度"
+    },
+    {
+      "date": "2022-08-01",
+      "indexPoints": 1341.87,
+      "frequency": "月度"
+    },
+    {
+      "date": "2022-11-01",
+      "indexPoints": 1201.74,
+      "frequency": "月度"
+    },
+    {
+      "date": "2022-12-01",
+      "indexPoints": 1253.94,
+      "frequency": "月度"
+    },
+    {
+      "date": "2023-01-01",
+      "indexPoints": 1319.96,
+      "frequency": "月度"
+    },
+    {
+      "date": "2023-02-01",
+      "indexPoints": 1327.33,
+      "frequency": "月度"
+    },
+    {
+      "date": "2023-03-01",
+      "indexPoints": 1339.73,
+      "frequency": "月度"
+    },
+    {
+      "date": "2023-04-01",
+      "indexPoints": 1391.18,
+      "frequency": "月度"
+    },
+    {
+      "date": "2023-05-01",
+      "indexPoints": 1422.1,
+      "frequency": "月度"
+    },
+    {
+      "date": "2023-06-01",
+      "indexPoints": 1424.11,
+      "frequency": "月度"
+    },
+    {
+      "date": "2023-07-01",
+      "indexPoints": 1417.66,
+      "frequency": "月度"
+    },
+    {
+      "date": "2023-08-01",
+      "indexPoints": 1440.65,
+      "frequency": "月度"
+    },
+    {
+      "date": "2023-10-23",
+      "indexPoints": 1709.2,
+      "frequency": "周度"
+    },
+    {
+      "date": "2023-10-30",
+      "indexPoints": 1492.59,
+      "frequency": "周度"
+    },
+    {
+      "date": "2023-11-06",
+      "indexPoints": 1383.74,
+      "frequency": "周度"
+    },
+    {
+      "date": "2023-11-13",
+      "indexPoints": 1321.53,
+      "frequency": "周度"
+    },
+    {
+      "date": "2023-11-20",
+      "indexPoints": 1421.13,
+      "frequency": "周度"
+    },
+    {
+      "date": "2023-11-27",
+      "indexPoints": 1762.82,
+      "frequency": "周度"
+    },
+    {
+      "date": "2023-12-04",
+      "indexPoints": 1724.72,
+      "frequency": "周度"
+    },
+    {
+      "date": "2023-12-11",
+      "indexPoints": 1732.25,
+      "frequency": "周度"
+    },
+    {
+      "date": "2023-12-18",
+      "indexPoints": 1725.78,
+      "frequency": "周度"
+    },
+    {
+      "date": "2023-12-25",
+      "indexPoints": 1754.79,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-01-03",
+      "indexPoints": 1766.8,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-01-08",
+      "indexPoints": 1671.9,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-01-15",
+      "indexPoints": 1712.76,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-01-22",
+      "indexPoints": 1669.73,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-01-29",
+      "indexPoints": 1869.35,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-02-05",
+      "indexPoints": 1846.44,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-02-19",
+      "indexPoints": 1816.81,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-02-26",
+      "indexPoints": 1697.59,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-03-04",
+      "indexPoints": 1695.1,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-03-11",
+      "indexPoints": 1719.88,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-03-18",
+      "indexPoints": 1692.74,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-03-25",
+      "indexPoints": 1787.16,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-04-01",
+      "indexPoints": 1727.73,
+      "frequency": "月度"
+    },
+    {
+      "date": "2024-04-08",
+      "indexPoints": 1703.87,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-04-15",
+      "indexPoints": 1694.99,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-04-22",
+      "indexPoints": 1681.73,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-04-29",
+      "indexPoints": 1542.07,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-05-06",
+      "indexPoints": 1593.48,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-05-13",
+      "indexPoints": 1641.16,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-05-20",
+      "indexPoints": 1595.54,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-05-27",
+      "indexPoints": 1580.48,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-06-03",
+      "indexPoints": 1680.84,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-06-10",
+      "indexPoints": 1738.78,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-06-17",
+      "indexPoints": 1722.03,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-06-24",
+      "indexPoints": 1633.99,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-07-01",
+      "indexPoints": 1741.17,
+      "frequency": "月度"
+    },
+    {
+      "date": "2024-07-08",
+      "indexPoints": 1636.47,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-07-15",
+      "indexPoints": 1546.56,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-11-04",
+      "indexPoints": 1705.83,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-11-11",
+      "indexPoints": 1705.83,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-11-18",
+      "indexPoints": 1550.32,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-11-25",
+      "indexPoints": 1507.39,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-12-02",
+      "indexPoints": 1479.98,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-12-09",
+      "indexPoints": 1328.31,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-12-16",
+      "indexPoints": 1523.13,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-12-23",
+      "indexPoints": 1579.29,
+      "frequency": "周度"
+    },
+    {
+      "date": "2024-12-30",
+      "indexPoints": 1344.01,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-01-06",
+      "indexPoints": 1567.56,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-01-13",
+      "indexPoints": 1645.35,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-01-20",
+      "indexPoints": 1687.34,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-02-10",
+      "indexPoints": 1706.81,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-02-17",
+      "indexPoints": 1714.18,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-02-24",
+      "indexPoints": 1705.1,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-03-03",
+      "indexPoints": 1726.03,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-03-10",
+      "indexPoints": 1679.91,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-03-17",
+      "indexPoints": 1765.94,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-03-24",
+      "indexPoints": 1820.52,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-03-31",
+      "indexPoints": 1776.59,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-04-07",
+      "indexPoints": 1818.96,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-04-14",
+      "indexPoints": 1835.14,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-04-21",
+      "indexPoints": 1842.82,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-04-28",
+      "indexPoints": 1813.27,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-05-05",
+      "indexPoints": 1871.53,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-05-12",
+      "indexPoints": 1905.24,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-05-19",
+      "indexPoints": 1908.71,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-05-26",
+      "indexPoints": 1861.15,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-06-02",
+      "indexPoints": 1821.51,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-06-09",
+      "indexPoints": 1863.34,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-06-16",
+      "indexPoints": 1857.76,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-06-23",
+      "indexPoints": 1880.42,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-11-03",
+      "indexPoints": 1919.18,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-11-10",
+      "indexPoints": 1919.18,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-11-17",
+      "indexPoints": 1905.88,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-11-24",
+      "indexPoints": 1879.69,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-12-01",
+      "indexPoints": 1734.33,
+      "frequency": "月度"
+    },
+    {
+      "date": "2025-12-08",
+      "indexPoints": 1666.52,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-12-15",
+      "indexPoints": 1514.69,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-12-22",
+      "indexPoints": 1787.33,
+      "frequency": "周度"
+    },
+    {
+      "date": "2025-12-29",
+      "indexPoints": 1640.48,
+      "frequency": "周度"
+    },
+    {
+      "date": "2026-01-05",
+      "indexPoints": 1860.4,
+      "frequency": "周度"
+    },
+    {
+      "date": "2026-01-12",
+      "indexPoints": 1711.22,
+      "frequency": "周度"
+    },
+    {
+      "date": "2026-01-19",
+      "indexPoints": 1775.54,
+      "frequency": "周度"
+    },
+    {
+      "date": "2026-01-26",
+      "indexPoints": 1486.08,
+      "frequency": "周度"
+    },
+    {
+      "date": "2026-02-02",
+      "indexPoints": 1624.12,
+      "frequency": "周度"
+    },
+    {
+      "date": "2026-02-09",
+      "indexPoints": 1649.63,
+      "frequency": "周度"
+    },
+    {
+      "date": "2026-02-16",
+      "indexPoints": 1823.62,
+      "frequency": "周度"
+    },
+    {
+      "date": "2026-02-23",
+      "indexPoints": 2009.32,
+      "frequency": "周度"
+    },
+    {
+      "date": "2026-03-02",
+      "indexPoints": 1892.44,
+      "frequency": "周度"
+    },
+    {
+      "date": "2026-03-09",
+      "indexPoints": 1775.56,
+      "frequency": "周度"
+    },
+    {
+      "date": "2026-03-16",
+      "indexPoints": 1870.8,
+      "frequency": "周度"
+    },
+    {
+      "date": "2026-03-23",
+      "indexPoints": 1809.14,
+      "frequency": "周度"
+    },
+    {
+      "date": "2026-03-30",
+      "indexPoints": 1923.6,
+      "frequency": "周度"
+    },
+    {
+      "date": "2026-04-06",
+      "indexPoints": 1880.28,
+      "frequency": "周度"
+    },
+    {
+      "date": "2026-04-13",
+      "indexPoints": 1882.97,
+      "frequency": "周度"
+    },
+    {
+      "date": "2026-04-20",
+      "indexPoints": 1763.05,
+      "frequency": "周度"
+    },
+    {
+      "date": "2026-04-27",
+      "indexPoints": 1766.01,
+      "frequency": "周度"
+    },
+    {
+      "date": "2026-05-04",
+      "indexPoints": 1790.02,
+      "frequency": "周度"
+    },
+    {
+      "date": "2026-05-11",
+      "indexPoints": 1769.6,
+      "frequency": "周度"
+    },
+    {
+      "date": "2026-05-18",
+      "indexPoints": 1732.69,
+      "frequency": "周度"
+    },
+    {
+      "date": "2026-05-25",
+      "indexPoints": 1780.59,
+      "frequency": "周度"
+    },
+    {
+      "date": "2026-06-01",
+      "indexPoints": 1689.63,
+      "frequency": "月度"
+    },
+    {
+      "date": "2026-06-08",
+      "indexPoints": 1748.27,
+      "frequency": "周度"
+    },
+    {
+      "date": "2026-06-15",
+      "indexPoints": 1732.41,
+      "frequency": "周度"
+    },
+    {
+      "date": "2026-06-22",
+      "indexPoints": 1775.86,
+      "frequency": "周度"
+    },
+    {
+      "date": "2026-06-29",
+      "indexPoints": 1746.12,
+      "frequency": "周度"
+    }
+  ]
+}

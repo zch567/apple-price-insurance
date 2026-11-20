@@ -22,6 +22,8 @@
   "arima": {
     "modelName": "ARIMA(0,1,2)",
     "outOfSampleMape": 0.1573,
-    "baselineMape": 0.1594
+    "baselineMape": 0.1594,
+    "forecastHorizonWeeks": 12,
+    "forecastYuanPerTon": [6060, 6094, 6094]
   }
 }

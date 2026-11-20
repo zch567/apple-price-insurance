@@ -6,6 +6,7 @@ const path = require('node:path')
 const insurance = require('../miniprogram/data/insurance.json')
 const {
   simulate,
+  simulateMarket,
   buildResultView,
   validateSettlementIndex,
   validateTons,
@@ -54,6 +55,53 @@ test('测试2：结算指数等于对应档位保障点位时不触发', () => {
   // 1588.29 点仍低于 95% 与 100% 档保障点位，这两档应触发。
   const outcome = run('1588.29', '1')
   assert.deepEqual(outcome.results.map((result) => result.triggered), [false, true, true])
+})
+
+test('模拟赔付在半分边界按十进制四舍五入', () => {
+  const cases = [
+    ['1588.21000000001', '2.24'],
+    ['1588.21', '2.25'],
+    ['1588.20999999999', '2.25'],
+  ]
+
+  for (const [settlementIndex, expected] of cases) {
+    const outcome = run(settlementIndex, '6.25')
+    assert.equal(outcome.results[0].payoutText, expected, settlementIndex)
+  }
+})
+
+test('市场价格以元/吨计算销售、赔付和未扣保费的模拟收入', () => {
+  const plans = [
+    { id: 'a', strikePrice: '6500', coveragePercent: '100' },
+    { id: 'b', strikePrice: '7000', coveragePercent: '80' },
+    { id: 'c', strikePrice: '7500', coveragePercent: '100' },
+  ]
+  const outcome = simulateMarket({ marketPrice: '6500', outputTons: '10', plans })
+  assert.equal(outcome.salesText, '65000.00')
+  assert.deepEqual(outcome.results.map(({ triggered, payoutText, incomeText }) => [triggered, payoutText, incomeText]), [
+    [false, '0.00', '65000.00'],
+    [true, '4000.00', '69000.00'],
+    [true, '10000.00', '75000.00'],
+  ])
+})
+
+test('市场价格测算保留中间精度并拒绝非法保障比例', () => {
+  const input = {
+    marketPrice: '0.15',
+    outputTons: '0.1',
+    plans: [
+      { id: 'a', strikePrice: '0.25', coveragePercent: '50' },
+      { id: 'b', strikePrice: '0.30', coveragePercent: '25' },
+    ],
+  }
+  const outcome = simulateMarket(input)
+  assert.equal(outcome.salesText, '0.02')
+  assert.equal(outcome.results[0].payoutText, '0.01')
+  assert.equal(outcome.results[0].incomeText, '0.02')
+  input.plans[1].coveragePercent = '101'
+  const invalid = simulateMarket(input)
+  assert.match(invalid.errors.plans[1].coveragePercent, /100%/)
+  assert.deepEqual(invalid.results, [])
 })
 
 test('测试3：结算指数高于全部保障点位时不触发（1800）', () => {

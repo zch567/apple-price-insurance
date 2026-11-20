@@ -1,3 +1,5 @@
+const { hasGap, observationChange, withTimes } = require('../../utils/price-series')
+const { percent } = require('../../utils/format')
 const DAY = 86400000
 const ROLLOVER_COLOR = '#a55d27'
 const MONTHLY_COLOR = '#766785'
@@ -17,18 +19,6 @@ function axisBounds(points, valueKey) {
   const bottom = Math.floor(min / step) * step
 
   return { step, bottom, top: Math.max(bottom + step, Math.ceil(max / step) * step) }
-}
-
-function hasGap(previous, point) {
-  if (previous.frequency === '月度' && point.frequency === '月度') {
-    const month = (date) => Number(date.slice(0, 4)) * 12 + Number(date.slice(5, 7))
-    return month(point.date) - month(previous.date) > 1
-  }
-  if (previous.frequency === '月度') return point.time - previous.time > 35 * DAY
-
-  // Group dates by Monday-start weeks so an early holiday close stays in its own week.
-  const week = (time) => Math.floor((time / DAY + 3) / 7)
-  return week(point.time) - week(previous.time) > 1
 }
 
 function drawDateTicks(ctx, start, end, x) {
@@ -69,21 +59,20 @@ Component({
     selectedMeta: '',
     selectedValue: '',
     selectedEvent: '',
+    selectedChange: '',
     selectedNumber: 0,
     isLatest: true,
   },
 
   lifetimes: {
     ready() {
-      this.points = this.data.series.map((point) => ({
-        ...point,
-        time: Date.parse(point.date + 'T00:00:00Z'),
-      }))
+      this.points = withTimes(this.data.series)
       if (!this.points.length) return
       this.points.forEach((point, index) => {
         const previous = this.points[index - 1]
         if (!previous) return
         point.gap = hasGap(previous, point)
+        point.change = observationChange(previous, point, this.data.valueKey)
         if (previous.contract && previous.contract !== point.contract) {
           point.previousContract = previous.contract
         }
@@ -152,6 +141,7 @@ Component({
         selectedDate: point.date,
         selectedMeta: point[metaKey],
         selectedValue: point[valueKey].toFixed(decimals).replace(/\B(?=(\d{3})+(?!\d))/g, ','),
+        selectedChange: Number.isFinite(point.change) ? (point.change > 0 ? '+' : '') + percent(point.change) : '无可比前值',
         selectedEvent: point.previousContract ? '主力换月 · ' + point.previousContract + ' → ' + point.contract : '',
         selectedNumber: index + 1,
         isLatest: index === this.visiblePoints.length - 1,

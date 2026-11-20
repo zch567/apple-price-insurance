@@ -1,0 +1,3 @@
+.forecast-grid { display: flex; gap: 12rpx; margin: 18rpx 0; }
+.forecast-point { flex: 1; min-width: 0; padding: 12rpx 15rpx; border-radius: 12rpx; background: #f5eaf0; }
+.forecast-value { display: block; color: #67203c; font-size: 34rpx; font-weight: 700; }

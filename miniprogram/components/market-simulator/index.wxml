@@ -1,0 +1,66 @@
+<view class="panel">
+  <text class="heading">市场价格情景</text>
+  <text class="source market-intro">初始价格为按静宁案例系数换算的演示值，可编辑。</text>
+  <view class="market-pair">
+    <view class="market-field">
+      <text class="market-label">市场价格（元/吨）</text>
+      <input class="market-input number {{errors.marketPrice ? 'market-invalid' : ''}}" type="digit"
+        maxlength="14" value="{{marketPrice}}" data-field="marketPrice" bindinput="updateScenario" aria-label="市场价格，元每吨" />
+      <text class="market-error" wx:if="{{errors.marketPrice}}">{{errors.marketPrice}}</text>
+    </view>
+    <view class="market-field">
+      <text class="market-label">苹果产量（吨）</text>
+      <input class="market-input number {{errors.outputTons ? 'market-invalid' : ''}}" type="digit"
+        maxlength="12" value="{{outputTons}}" data-field="outputTons" bindinput="updateScenario" aria-label="苹果产量，吨" />
+      <text class="market-error" wx:if="{{errors.outputTons}}">{{errors.outputTons}}</text>
+    </view>
+  </view>
+</view>
+
+<view class="panel">
+  <text class="heading">保障方案</text>
+  <text class="source market-intro">保障价和比例预填为静宁案例参考值，两项均可按方案修改。</text>
+  <view class="market-plan" wx:for="{{plans}}" wx:key="id">
+    <text class="market-plan-name">{{item.name}}<text class="market-reference">　初始参考 · {{item.reference}}</text></text>
+    <view class="market-pair">
+      <view class="market-field">
+        <text class="market-label">保障价格（元/吨）</text>
+        <input class="market-input number {{errors.plans[index].strikePrice ? 'market-invalid' : ''}}" type="digit"
+          maxlength="14" value="{{item.strikePrice}}" data-index="{{index}}" data-field="strikePrice" bindinput="updatePlan"
+          aria-label="{{item.name}}保障价格，元每吨" />
+        <text class="market-error" wx:if="{{errors.plans[index].strikePrice}}">{{errors.plans[index].strikePrice}}</text>
+      </view>
+      <view class="market-field">
+        <text class="market-label">保障比例（%）</text>
+        <input class="market-input number {{errors.plans[index].coveragePercent ? 'market-invalid' : ''}}" type="digit"
+          maxlength="8" value="{{item.coveragePercent}}" data-index="{{index}}" data-field="coveragePercent" bindinput="updatePlan"
+          aria-label="{{item.name}}保障比例，百分比" />
+        <text class="market-error" wx:if="{{errors.plans[index].coveragePercent}}">{{errors.plans[index].coveragePercent}}</text>
+      </view>
+    </view>
+  </view>
+  <button class="market-calculate" bindtap="calculate" disabled="{{plans.length < 2}}">比较三种方案</button>
+  <text class="source market-intro">赔付 = max（保障价 − 市场价，0）× 产量 × 保障比例。模拟收入为销售收入加赔付，采用未扣保费口径。</text>
+</view>
+
+<view class="panel" wx:if="{{results.length}}">
+  <text class="heading">赔付与收入对比</text>
+  <text class="source market-intro">市场价 {{marketPrice}} 元/吨 · 产量 {{outputTons}} 吨</text>
+  <text class="source market-intro">销售收入 {{salesText}} 元 · 下列模拟收入均未扣除保费</text>
+  <view class="market-result" wx:for="{{results}}" wx:key="id">
+    <view class="market-result-heading">
+      <text class="market-plan-name">{{item.name}}</text>
+      <text class="market-state {{item.triggered ? 'market-triggered' : ''}}">{{item.triggered ? '触发赔付' : '未触发'}}</text>
+    </view>
+    <view class="market-pair">
+      <view class="market-field">
+        <text class="market-label">模拟赔付（元）</text>
+        <text class="market-amount number">{{item.payoutText}}</text>
+      </view>
+      <view class="market-field">
+        <text class="market-label">农户模拟收入（元）</text>
+        <text class="market-amount number">{{item.incomeText}}</text>
+      </view>
+    </view>
+  </view>
+</view>

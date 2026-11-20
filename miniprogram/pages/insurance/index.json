@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "苹果价格保险测算"
+  "navigationBarTitleText": "苹果价格保险测算",
+  "usingComponents": {
+    "market-simulator": "/components/market-simulator/index"
+  }
 }

@@ -109,6 +109,47 @@ function readPayoutParams(insurance) {
   return { payoutRatio, yuanPerTonPoint }
 }
 
+function decimalParts(value) {
+  const [coefficient, exponent = '0'] = String(value).split('e')
+  const [whole, fraction = ''] = coefficient.split('.')
+  return {
+    units: BigInt(whole + fraction),
+    places: fraction.length - Number(exponent),
+  }
+}
+
+function decimalScale(places) {
+  return BigInt('1' + '0'.repeat(places))
+}
+
+function formatCents(cents) {
+  const negative = cents < BigInt(0)
+  const digits = String(negative ? -cents : cents).padStart(3, '0')
+  return (negative ? '-' : '') + digits.slice(0, -2) + '.' + digits.slice(-2)
+}
+
+function addDecimals(left, right) {
+  const places = Math.max(left.places, right.places)
+  return {
+    units: left.units * decimalScale(places - left.places)
+      + right.units * decimalScale(places - right.places),
+    places,
+  }
+}
+
+function multiplyDecimals(left, right) {
+  return { units: left.units * right.units, places: left.places + right.places }
+}
+
+function roundDecimalToCents({ units, places }) {
+  if (places <= 2) return units * decimalScale(2 - places)
+
+  const divisor = decimalScale(places - 2)
+  const half = divisor / BigInt(2)
+  const offset = units < BigInt(0) ? BigInt(1) - half : half
+  return (units + offset) / divisor
+}
+
 /**
  * 单档赔付：max(保障点位 - 平均结算指数, 0) × 投保吨数 × 赔付比例 × 金额换算系数。
  */
@@ -119,15 +160,65 @@ function computePayout(plan, settlementIndex, tons, params) {
   const yuanPerTonPoint = params && Number.isFinite(params.yuanPerTonPoint)
     ? params.yuanPerTonPoint
     : DEFAULTS.yuanPerTonPoint
-  const gap = Math.max(plan.strikeIndex - settlementIndex, 0)
-  const triggered = gap > 0
-  const rawPayout = triggered ? gap * tons * payoutRatio * yuanPerTonPoint : 0
-  return {
-    triggered,
-    gap,
-    rawPayout,
-    payout: roundToCents(rawPayout),
+  if (settlementIndex >= plan.strikeIndex) {
+    return { triggered: false, gap: 0, rawPayout: 0, payout: 0, payoutText: '0.00' }
   }
+
+  // 先对齐十进制位数再做差和相乘，在最终换算成分时才舍入。
+  const gap = addDecimals(decimalParts(plan.strikeIndex), decimalParts(-settlementIndex))
+  const raw = [tons, payoutRatio, yuanPerTonPoint].map(decimalParts).reduce(multiplyDecimals, gap)
+  const payoutText = formatCents(roundDecimalToCents(raw))
+  return {
+    triggered: true,
+    gap: Number(gap.units + 'e' + -gap.places),
+    rawPayout: Number(raw.units + 'e' + -raw.places),
+    payout: Number(payoutText),
+    payoutText,
+  }
+}
+
+function simulateMarket({ marketPrice, outputTons, plans }) {
+  const market = readText(marketPrice)
+  const output = readText(outputTons)
+  const price = Number(market.text)
+  const tons = Number(output.text)
+  const errors = {
+    marketPrice: market.empty || !Number.isFinite(price) || price < 0 ? '请输入大于或等于 0 的市场价格' : '',
+    outputTons: output.empty || !Number.isFinite(tons) || tons <= 0 ? '请输入大于 0 的苹果产量' : '',
+    plans: plans.map((plan) => {
+      const strike = readText(plan.strikePrice)
+      const ratio = readText(plan.coveragePercent)
+      const strikePrice = Number(strike.text)
+      const coverage = Number(ratio.text)
+      return {
+        strikePrice: strike.empty || !Number.isFinite(strikePrice) || strikePrice <= 0 ? '保障价格须大于 0' : '',
+        coveragePercent: ratio.empty || !Number.isFinite(coverage) || coverage <= 0 || coverage > 100
+          ? '保障比例须大于 0 且不超过 100%' : '',
+      }
+    }),
+  }
+  if (errors.marketPrice || errors.outputTons
+    || errors.plans.some((plan) => plan.strikePrice || plan.coveragePercent)) return { errors, results: [] }
+
+  const quantity = decimalParts(tons)
+  const sales = multiplyDecimals(decimalParts(price), quantity)
+  const results = plans.map(({ id, name, strikePrice, coveragePercent }) => {
+    const strike = Number(strikePrice)
+    const triggered = price < strike
+    const percent = decimalParts(Number(coveragePercent))
+    const ratio = { units: percent.units, places: percent.places + 2 }
+    const gap = triggered ? addDecimals(decimalParts(strike), decimalParts(-price)) : decimalParts(0)
+    const rawPayout = [gap, quantity, ratio].reduce(multiplyDecimals)
+    const income = addDecimals(sales, rawPayout)
+    return {
+      id,
+      name,
+      triggered,
+      payoutText: formatCents(roundDecimalToCents(rawPayout)),
+      incomeText: formatCents(roundDecimalToCents(income)),
+    }
+  })
+  return { errors, results, salesText: formatCents(roundDecimalToCents(sales)) }
 }
 
 /**
@@ -177,7 +268,7 @@ function simulate(insurance, rawInputs) {
       gap: calc.gap,
       rawPayout: calc.rawPayout,
       payout: calc.payout,
-      payoutText: formatAmount(calc.payout),
+      payoutText: calc.payoutText,
       triggerProbability: plan.triggerProbability,
       triggerProbabilityText: formatRatioPercent(plan.triggerProbability),
       expectedPayoutYuanPerTon: plan.expectedPayoutYuanPerTon,
@@ -295,6 +386,7 @@ module.exports = {
   validateTons,
   computePayout,
   simulate,
+  simulateMarket,
   buildResultView,
   roundToCents,
   formatAmount,

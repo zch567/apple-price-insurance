@@ -9,6 +9,7 @@
       <text class="number reading-number">{{selectedValue}}</text><text class="reading-unit">{{unit}}</text>
     </view>
   </view>
+  <text class="chart-change number">本期涨跌幅　{{selectedChange}}</text>
 
   <view class="ranges" aria-label="图表时间范围">
     <button wx:for="{{ranges}}" wx:key="weeks" class="range {{activeWeeks === item.weeks ? 'range-active' : ''}}"

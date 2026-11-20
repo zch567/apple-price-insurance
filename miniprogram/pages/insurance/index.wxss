@@ -1,4 +1,8 @@
 .hero-copy { display: block; color: #f3dbe3; font-size: 25rpx; }
+.mode-switch { display: flex; gap: 8rpx; margin-bottom: 20rpx; padding: 6rpx; border-radius: 15rpx; background: #eee2e7; }
+.mode-switch .mode { flex: 1; margin: 0; padding: 16rpx 4rpx; border-radius: 11rpx; color: #67203c; background: transparent; font-size: 27rpx; font-weight: 600; line-height: 1.45; }
+.mode-switch .mode::after { border: 0; }
+.mode-switch .mode-active { color: #fffafd; background: #851e3e; }
 
 .field { margin-top: 24rpx; }
 .field-label { display: block; margin-bottom: 10rpx; font-size: 25rpx; color: #4d3d49; font-weight: 600; }
@@ -105,7 +109,15 @@
 .plan-state.is-triggered { color: #9e3154; font-weight: 600; }
 .row-emphasis { background: #f6eaf0; }
 .row-emphasis .row-label { color: #67203c; font-weight: 600; }
-.cell.is-payout .cell-value { font-size: 30rpx; font-weight: 700; color: #851e3e; }
+.cell.is-payout .cell-value {
+  max-width: 100%;
+  font-size: 30rpx;
+  font-weight: 700;
+  color: #851e3e;
+  white-space: normal;
+  word-break: break-all;
+}
+.cell.is-payout .cell-value-compact { font-size: 23rpx; }
 .cell.is-triggered .cell-value { color: #851e3e; font-weight: 600; }
 .cell.is-calm .cell-value { color: #746872; }
 .cell.is-pending .cell-value { font-size: 23rpx; color: #8a6a2f; font-weight: 600; }

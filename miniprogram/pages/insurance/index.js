@@ -1,5 +1,5 @@
-const insurance = JSON.parse(wx.getFileSystemManager().readFileSync('data/insurance.json', 'utf8'))
-const { simulate, buildResultView } = require('./calculator')
+const { getInsurance } = require('../../utils/insurance-data')
+const insurance = getInsurance()
 
 function emptyResult() {
   return {
@@ -13,6 +13,15 @@ function emptyResult() {
 
 Page({
   data: {
+    mode: 'market',
+    marketPlans: insurance.plans.map((plan, index) => ({
+      id: plan.id,
+      name: '方案 ' + String.fromCharCode(65 + index),
+      reference: (plan.coverageLevel * 100).toFixed(0) + '% 案例',
+      strikePrice: (plan.strikeIndex * insurance.yuanPerTonPoint).toFixed(4),
+      coveragePercent: String(insurance.payoutRatio * 100),
+    })),
+    marketPrice: String(1600 * insurance.yuanPerTonPoint),
     backDelta: 0,
     settlementIndex: '',
     tons: '',
@@ -25,8 +34,6 @@ Page({
     resultRows: [],
     resultSummary: '',
     actuarialPending: false,
-    actuarialDataNote: insurance.actuarialDataNote || '',
-    actuarialDataSummary: insurance.actuarialDataSummary || '',
     payoutRatioText: String(insurance.payoutRatio),
     yuanPerTonPointText: String(insurance.yuanPerTonPoint),
     settlementWeeksText: String(insurance.settlementWeeks),
@@ -48,6 +55,10 @@ Page({
     })
   },
 
+  switchMode(event) {
+    this.setData({ mode: event.currentTarget.dataset.mode })
+  },
+
   onTonsInput(event) {
     this.setData({
       tons: event.detail.value,
@@ -57,6 +68,7 @@ Page({
   },
 
   onCalculate() {
+    const { simulate, buildResultView } = require('./calculator')
     const outcome = simulate(insurance, {
       settlementIndex: this.data.settlementIndex,
       tons: this.data.tons,

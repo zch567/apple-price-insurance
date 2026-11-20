@@ -74,3 +74,9 @@
 .rollover { width: 12rpx; height: 12rpx; border-radius: 50%; background: #a55d27; }
 .chart-source { margin-top: 7rpx; font-size: 24rpx; }
 .chart-note { margin-top: 6rpx; font-size: 24rpx; }
+.chart-change {
+  display: block;
+  margin: 2rpx 0 14rpx;
+  font-size: 24rpx;
+  color: #67203c;
+}

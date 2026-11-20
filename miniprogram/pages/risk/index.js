@@ -1,5 +1,16 @@
 const { pca, arima } = JSON.parse(wx.getFileSystemManager().readFileSync('data/risk.json', 'utf8'))
 const { percent } = require('../../utils/format')
+const { getPrices, weeklyRisk } = require('../../utils/price-series')
+const { futures, spotIndex } = getPrices()
+const history = [
+  { name: '静宁现货指数', ...weeklyRisk(spotIndex, 'indexPoints') },
+  { name: '苹果主力期货', ...weeklyRisk(futures, 'closeYuanPerTon') },
+].map(({ name, count, volatility, declineRate }) => ({
+  name,
+  count,
+  volatility: volatility === null ? '—' : percent(volatility),
+  declineRate: declineRate === null ? '—' : percent(declineRate),
+}))
 const descriptions = {
   PC1: '气温和降水的共同变化。',
   PC2: '期货与现货变化率方向相反的部分。',
@@ -8,6 +19,7 @@ const descriptions = {
 
 Page({
   data: {
+    history,
     cumulative: percent(pca.cumulativeContributionRate),
     components: pca.components.map((component) => ({
       ...component,

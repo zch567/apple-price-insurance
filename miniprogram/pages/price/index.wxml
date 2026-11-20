@@ -5,10 +5,24 @@
     <navigator class="action secondary" url="/pages/insurance/index"><text>保险测算</text><text class="arrow" aria-hidden="true">→</text></navigator>
   </view>
 
+  <view class="panel">
+    <text class="heading">期货价格预测</text>
+    <text class="source">{{arimaName}} · 未来 {{forecastHorizon}} 周预测均值路径（成果表已列出的前三个值）</text>
+    <view class="forecast-grid">
+      <view class="forecast-point" wx:for="{{forecast}}" wx:key="week">
+        <text class="label">预测第 {{item.week}} 周</text>
+        <text class="number forecast-value">{{item.value}}</text>
+        <text class="source">元/吨</text>
+      </view>
+    </view>
+    <text class="source">来源：A4 成果「预测与误差」；原表以相对周次列出前三个值，未给出后九周数值及对应日期。</text>
+  </view>
+
   <price-chart title="苹果期货主力连续 · 周收盘价" series="{{futures}}" value-key="closeYuanPerTon" meta-key="contract"
     unit="元/吨" color="#364a93" source="来源：郑商所苹果期货周行情，经 A1 成果「期货主力连续」整理。" />
 
   <price-chart title="新华·静宁苹果价格指数" series="{{spotIndex}}" value-key="indexPoints" meta-key="frequency"
     unit="点" decimals="{{2}}" color="#9e3154" source="来源：新华·中国（静宁）苹果价格指数「指数点位(精确)」。"
-    note="2023-10-23 起为周度数据。2026-03-02 展示值由 2744.39 校正为 1892.44。" />
+    note="2023-10-23 起有周度观测，部分记录仍为月度。2026-03-02 展示值由 2744.39 校正为 1892.44。" />
+  <text class="source">本期涨跌幅按相邻同频观测计算；缺口、换频及期货换月的观测不显示涨跌幅。</text>
 </view>

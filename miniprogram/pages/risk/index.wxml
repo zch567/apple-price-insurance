@@ -2,6 +2,24 @@
   <text class="page-context">静宁苹果 · 保险与期货</text>
 
   <view class="panel">
+    <text class="heading">历史价格风险</text>
+    <view class="history-row" wx:for="{{history}}" wx:key="name">
+      <text class="history-name">{{item.name}} · {{item.count}} 个周度变动</text>
+      <view class="metrics">
+        <view class="metric">
+          <text class="label">周涨跌幅标准差</text>
+          <text class="number metric-value">{{item.volatility}}</text>
+        </view>
+        <view class="metric">
+          <text class="label">历史下跌频率</text>
+          <text class="number metric-value">{{item.declineRate}}</text>
+        </view>
+      </view>
+    </view>
+    <text class="source provenance">标准差衡量历史波动；下跌频率为下跌周数占比。仅使用连续、可比的周度观测，期货剔除主力换月。</text>
+  </view>
+
+  <view class="panel">
     <text class="heading">主成分分析（PCA）</text>
     <view class="cumulative">
       <text class="label">前三个主成分累计贡献率</text>
@@ -35,7 +53,7 @@
     </view>
     <text class="interpretation">本次测试的误差仅相差 <text class="number difference">{{mapeGap}} 个百分点</text>。</text>
     <text class="source provenance">来源：A4 成果「检验与模型」「预测与误差」。</text>
-    <text class="source forecast-note">完整预测曲线待补齐带日期的 12 周预测值。</text>
+    <text class="source forecast-note">预测均值路径已知数值见价格走势页。</text>
   </view>
 
   <navigator class="action" url="/pages/insurance/index"><text>保险测算</text><text class="arrow" aria-hidden="true">→</text></navigator>

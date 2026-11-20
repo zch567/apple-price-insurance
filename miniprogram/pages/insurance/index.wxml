@@ -1,11 +1,82 @@
 <view class="shell">
   <view class="hero">
     <text class="hero-context">静宁苹果 · 保险与期货</text>
-    <text class="hero-title">保险测算</text>
+    <text class="hero-title">苹果价格保险测算</text>
+    <text class="hero-copy">按保险期间平均结算指数，对比 90%、95%、100% 三档保障的模拟赔付。</text>
   </view>
+
   <view class="panel">
-    <text class="heading">测算功能待接入</text>
-    <text class="label">这里将提供 90%、95%、100% 三档保障的赔付比较。</text>
+    <text class="heading">测算输入</text>
+
+    <view class="field">
+      <text class="field-label">保险期间 {{settlementWeeksText}} 周平均结算指数</text>
+      <view class="input-wrap {{errors.settlementIndex ? 'input-error' : ''}}">
+        <input class="input number" type="digit" value="{{settlementIndex}}" placeholder="例如 1600"
+          placeholder-class="input-placeholder" maxlength="16" confirm-type="next" bindinput="onSettlementInput" />
+        <text class="input-unit">点</text>
+      </view>
+      <text class="error-text" wx:if="{{errors.settlementIndex}}">{{errors.settlementIndex}}</text>
+    </view>
+
+    <view class="field">
+      <text class="field-label">投保数量</text>
+      <view class="input-wrap {{errors.tons ? 'input-error' : ''}}">
+        <input class="input number" type="digit" value="{{tons}}" placeholder="例如 1"
+          placeholder-class="input-placeholder" maxlength="12" confirm-type="done" bindinput="onTonsInput" bindconfirm="onCalculate" />
+        <text class="input-unit">吨</text>
+      </view>
+      <text class="error-text" wx:if="{{errors.tons}}">{{errors.tons}}</text>
+    </view>
+
+    <button class="calc-button" bindtap="onCalculate">开始测算</button>
+    <text class="source formula-note">赔付金额 = max(保障点位 − 结算指数, 0) × 投保吨数 × 赔付比例 {{payoutRatioText}} × 金额换算系数 {{yuanPerTonPointText}}（元/吨/点）。</text>
   </view>
+
+  <view class="panel result-panel" wx:if="{{hasResult}}">
+    <view class="result-head">
+      <view class="result-heading">
+        <text class="heading">三档方案对比</text>
+        <text class="result-inputs number">{{resultSummary}}</text>
+      </view>
+      <text class="sim-badge">研究模拟</text>
+    </view>
+
+    <view class="compare">
+      <view class="compare-row compare-head">
+        <text class="row-label">保障水平</text>
+        <view class="row-cells">
+          <view class="cell" wx:for="{{resultPlans}}" wx:key="id">
+            <text class="plan-name number">{{item.coverageLabel}}</text>
+            <text class="plan-state {{item.triggered ? 'is-triggered' : 'is-calm'}}">{{item.statusText}}</text>
+          </view>
+        </view>
+      </view>
+
+      <view class="compare-row {{row.emphasis ? 'row-emphasis' : ''}}" wx:for="{{resultRows}}" wx:for-item="row" wx:key="key">
+        <text class="row-label">{{row.label}}</text>
+        <view class="row-cells">
+          <view class="cell {{cell.tone}}" wx:for="{{row.cells}}" wx:for-item="cell" wx:key="planId">
+            <text class="cell-value number">{{cell.text}}</text>
+            <text class="cell-note" wx:if="{{cell.note}}">{{cell.note}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="pending-note" wx:if="{{actuarialPending}}">
+      <text class="pending-title">精算指标待补充</text>
+      <text class="source">{{actuarialDataNote}}</text>
+    </view>
+
+    <text class="source result-note">「本次模拟赔付」按本次输入实时计算；精算触发概率、精算期望赔付为精算组模型指标，农户自缴为案例口径指标，均不随本次输入变化。</text>
+    <text class="source result-source">{{actuarialDataSummary}}</text>
+  </view>
+
+  <view class="panel">
+    <text class="heading">口径与说明</text>
+    <text class="source">金额换算系数 4.49 为静宁案例的近似值，单位为元/吨/点；赔付比例按 1 计。</text>
+    <text class="source">测算结果属于研究模拟，不构成保险报价、承保或理赔依据。</text>
+  </view>
+
   <navigator class="action secondary" open-type="{{backDelta ? 'navigateBack' : 'redirect'}}" delta="{{backDelta}}" url="/pages/price/index"><text>返回价格走势</text><text class="arrow" aria-hidden="true">→</text></navigator>
 </view>

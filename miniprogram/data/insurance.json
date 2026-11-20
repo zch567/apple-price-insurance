@@ -1,0 +1,64 @@
+{
+  "settlementWeeks": 12,
+  "payoutRatio": 1,
+  "yuanPerTonPoint": 4.49,
+  "yuanPerTonPointNote": "4.49 为静宁案例的近似金额换算系数（元/吨/点），来源：B最终结果汇总.xlsx「参数汇总」B11。",
+  "actuarialDataStatus": "available",
+  "actuarialDataSource": {
+    "file": "中期精算小交付物/B最终结果汇总.xlsx",
+    "sheets": [
+      "参数汇总",
+      "B4三档对比",
+      "B4农户视角"
+    ],
+    "triggerProbability": "B4三档对比!B3:D3；与 B3风险指标!C2:C4 一致",
+    "expectedPayoutYuanPerTon": "B4农户视角!B6:D6；等于 B4三档对比!B4:D4 × 4.49（保留 1 位小数）",
+    "farmerPremiumYuanPerTon": "B4农户视角!B4:D4；等于 B4三档对比!B9:D9 × 4.49（保留 1 位小数）"
+  },
+  "actuarialDataSummary": "精算指标来源：B最终结果汇总.xlsx「B4三档对比」B3:D3 与「B4农户视角」B4:D4、B6:D6；为精算组模型/案例口径，不随本次输入变化。",
+  "actuarialDataNote": "九项精算指标已从 B最终结果汇总.xlsx 实际读取：触发概率取「B4三档对比」B3:D3（与「B3风险指标」C2:C4 一致）；期望赔付（元/吨）取「B4农户视角」B6:D6（与「B4三档对比」B4:D4 × 4.49 一致）；农户自缴（元/吨）取「B4农户视角」B4:D4（与「B4三档对比」B9:D9 × 4.49 及总保费 × 20% 一致）。",
+  "plans": [
+    {
+      "id": "plan-90",
+      "name": "90% 保障",
+      "coverageLevel": 0.9,
+      "strikeIndex": 1588.29,
+      "triggerProbability": 0.2712,
+      "expectedPayoutYuanPerTon": 145.3,
+      "farmerPremiumYuanPerTon": 55.8,
+      "sourceCells": {
+        "triggerProbability": "B4三档对比!B3",
+        "expectedPayoutYuanPerTon": "B4农户视角!B6",
+        "farmerPremiumYuanPerTon": "B4农户视角!B4"
+      }
+    },
+    {
+      "id": "plan-95",
+      "name": "95% 保障",
+      "coverageLevel": 0.95,
+      "strikeIndex": 1676.53,
+      "triggerProbability": 0.4137,
+      "expectedPayoutYuanPerTon": 280.2,
+      "farmerPremiumYuanPerTon": 58.9,
+      "sourceCells": {
+        "triggerProbability": "B4三档对比!C3",
+        "expectedPayoutYuanPerTon": "B4农户视角!C6",
+        "farmerPremiumYuanPerTon": "B4农户视角!C4"
+      }
+    },
+    {
+      "id": "plan-100",
+      "name": "100% 保障",
+      "coverageLevel": 1,
+      "strikeIndex": 1764.77,
+      "triggerProbability": 0.569,
+      "expectedPayoutYuanPerTon": 475.8,
+      "farmerPremiumYuanPerTon": 62,
+      "sourceCells": {
+        "triggerProbability": "B4三档对比!D3",
+        "expectedPayoutYuanPerTon": "B4农户视角!D6",
+        "farmerPremiumYuanPerTon": "B4农户视角!D4"
+      }
+    }
+  ]
+}
